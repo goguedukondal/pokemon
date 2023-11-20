@@ -4,10 +4,10 @@ function Bookmark() {
   const [bookmarkedPokemon, setBookmarkedPokemon] = useState([]);
 
   useEffect(() => {
-    // Retrieve bookmarked Pokémon data from local storage on component mount
+  
     const storedPokemon = localStorage.getItem('bookmarkedPokemon');
     if (storedPokemon) {
-      // Parse the stored data and ensure it's an array
+     
       const parsedPokemon = JSON.parse(storedPokemon);
       setBookmarkedPokemon(Array.isArray(parsedPokemon) ? parsedPokemon : [parsedPokemon]);
     }
